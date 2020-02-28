@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Q4 </title>
+	</head>
+	<body>
+		<button onclick="calculate()" > START</button>
+	</body>
+	<script>
+		function calculate()
+		{
+			var x1=prompt('Enter x1', '2');
+			x1=parseInt(x1);
+			var x2=prompt('Enter x2', '2');
+			x2=parseInt(x2);
+			var y1=prompt('Enter y1', '2');
+			y1=parseInt(y1);
+			var y2=prompt('Enter y2', '2');
+			y2=parseInt(y2);
+			var distance=Math.pow((x2-x1), 2)+ Math.pow((y2-y1), 2);
+			distance=Math.pow(distance, 0.5);
+			alert("Distance="+ distance);
+		}
+	</script>
+</html>

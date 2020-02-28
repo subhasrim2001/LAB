@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>M3 Exercise 11.22 - Justin Miller</title>
+    <!--
+    Page: 391
+    Description:    (Printing Dates in Various Formats) Dates are printed in several common formats. Write a
+                    script that reads a date from an HTML5 form and creates a Date object in which to store
+                    it. Then use the various methods of the Date object that convert Dates into strings to
+                    display the date in several formats.
+    -->
+    <script type="text/javascript">
+        "use strict";
+
+        function replacer(key, value) {
+            if (typeof value === 'number' && !isFinite(value)) {
+                return String(value);
+            }
+            return value;
+        }
+
+        function formatDate() {
+            var dateString, date, curr_date, curr_month, curr_year, curr_day, json_day;
+            dateString = document.getElementById("date");
+            dateString = dateString.value.replace(/-/g, "/");
+            date = new Date(dateString);
+
+            curr_date = date.getDate();
+            curr_month = date.getMonth() + 1; // Months are 0 based
+            curr_year = date.getFullYear();
+            curr_day = date.getDay();
+            json_day = JSON.stringify(date.toJSON(), replacer);
+
+            document.getElementById("dateObject").innerHTML =
+                    "<p> Default:<br/>" + date.toString() + "<\/p>" +
+                            "<p> Month-Day-Year:<br/>" + curr_month + "-" + curr_day + "-" + curr_year + "</p>" +
+                            "<p> Year-Month-Day:<br/> " + curr_year + "-" + curr_month + "-" + curr_day + "</p>" +
+                            "<p> JSON:<br/> " + json_day + "<\/p>";
+        }
+
+        function start() {
+            var executeButton = document.getElementById("execute");
+            executeButton.addEventListener("click", formatDate, false);
+        }
+
+        window.addEventListener("load", start, false);
+    </script>
+</head>
+<body>
+<h1>M3 Exercise 11.22 - Justin Miller</h1>
+<input id="date" type="date" name="date1" value="2013-02-14" />
+<input id="execute" type="button" value="Format Date"/>
+<span id="dateObject" style="border: 1px solid silver"></span>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Q7 </title>
+		<script>
+			function myFunction()
+			{
+				var a=document.getElementById('a').value;
+				a=parseInt(a);
+				var b=document.getElementById('b').value;
+				b=parseInt(b);
+				var c=document.getElementById('c').value;
+				c=parseInt(c);
+				alert("Sum is " + (a+b+c) );
+				alert("Product is " + a*b*c );
+				alert("Average is " + (a+b+c)/3 );
+				var d;
+				if(a>b && a>c)
+				{
+					d=a;
+				}
+				else if(b>a && b>c)
+				{
+					d=b;
+				}
+				else
+				{
+					d=c;
+				}
+				alert("Largest is " + d );
+				if(a<b && a<c)
+				{
+					d=a;
+				}
+				else if(b<a && b<c)
+				{
+					d=b;
+				}
+				else
+				{
+					d=c;
+				}
+				alert("Smallest is " + d );
+			}
+		</script>
+	</head>
+	<body>
+		<h3> 3 number calculations </h3><br>
+		Enter a:<input id="a"> </input><br>
+		Enter b:<input id="b"> </input><br>
+		Enter c:<input id="c"> </input><br>
+		<button onclick="myFunction()" > Calculate </button>
+	</body>
+</html>
