@@ -1,4 +1,4 @@
-/*Reverse ‘n’ characters.*/
+/*Reverse â€˜nâ€™ characters.*/
 #include<stdio.h>
 void rev(char p[20], int a, int b)
 {
