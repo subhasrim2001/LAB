@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			function calculate()
+			{
+				var dateString, date, d, m, y, todate;
+				var month=["Jan", "Feb", "Mar", "Apr", "May", "Jun", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
+				alert("hey");
+				dateString=document.getElementById("user");
+				dateString= dateString.value.replace(/-/g, "/");
+				date= new Date(dateString);
+				toodate=date.getDate();
+				d=date.getDay();
+				document.write(d);
+				m=date.getMonth()+1;
+				y=date.getFullYear();
+				/*document.getElementById("Output").innerHTML=
+				"Default:<br> " + date.toString() + "<br>" + 
+				"YYYY-MM-DD<br>" + y + "-" + m + "-" + d + "<br>" +
+				"MM/DD/YYYY<br>" + m + "/" + d + "/" + y + "<br>" +
+				"Month DD YYYY<br>" + month[m-1] + " " + d + " " + y + "<br>" +
+				"DD Month YYYY<br>" + d + " " + month[m-1] + " " + y + "<br>";*/
+			}
+		</script>
+	</head>
+	<body>
+		<h3> Date form </h3>
+		<br>
+		Enter Date: 
+		<input id="user" type="date" ></input>
+		<button onclick="calculate()">Display</button>
+		<br>
+		Patterns
+		<br>
+		<p id="Output"> </p> 
+	</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Q6 </title>
+		<script>
+			function calculate()
+			{
+				var x=document.getElementById('x').value;
+				x=parseInt(x);
+				var y=document.getElementById('y').value;
+				y=parseInt(y);
+				document.getElementById('s').value=(x+y);
+				document.getElementById('d').value=(x-y);
+				document.getElementById('p').value=(x*y);
+				document.getElementById('q').value=(x/y);
+			}
+		</script>
+	</head>
+	<body>
+		<h3> Arithmetic Operations </h3><br>
+		Enter x: <input id="x" onkeyup="calculate()"> </input><br>
+		Enter y: <input id="y" onkeyup="calculate()"> </input><br>
+		Sum:<input id="s"> </input><br>
+		Difference:<input id="d"> </input><br>
+		Product:<input id="p"> </input><br>
+		Quotient:<input id="q"> </input><br>
+	</body>
+</html>
